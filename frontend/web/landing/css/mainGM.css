@@ -1,0 +1,1852 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, video {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"), url("../fonts/RobotoRegular/RobotoRegular.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype"), url("../fonts/RobotoMedium/RobotoMedium.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype"), url("../fonts/RobotoBold/RobotoBold.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: "SFUI Text";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/SFUITextHeavy/SFUITextHeavy.eot");
+  src: url("../fonts/SFUITextHeavy/SFUITextHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUITextHeavy/SFUITextHeavy.woff") format("woff"), url("../fonts/SFUITextHeavy/SFUITextHeavy.ttf") format("truetype"), url("../fonts/SFUITextHeavy/SFUITextHeavy.svg#SFUI Text") format("svg"); }
+
+@font-face {
+  font-family: "SFUI Text";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/SFUITextBold/SFUITextBold.eot");
+  src: url("../fonts/SFUITextBold/SFUITextBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUITextBold/SFUITextBold.woff") format("woff"), url("../fonts/SFUITextBold/SFUITextBold.ttf") format("truetype"), url("../fonts/SFUITextBold/SFUITextBold.svg#SFUI Text") format("svg"); }
+
+@font-face {
+  font-family: "SFUI Text";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/SFUITextMedium/SFUITextMedium.eot");
+  src: url("../fonts/SFUITextMedium/SFUITextMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUITextMedium/SFUITextMedium.woff") format("woff"), url("../fonts/SFUITextMedium/SFUITextMedium.ttf") format("truetype"), url("../fonts/SFUITextMedium/SFUITextMedium.svg#SFUI Text") format("svg"); }
+
+@font-face {
+  font-family: "SFUI Text";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/SFUITextRegular/SFUITextRegular.eot");
+  src: url("../fonts/SFUITextRegular/SFUITextRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUITextRegular/SFUITextRegular.woff") format("woff"), url("../fonts/SFUITextRegular/SFUITextRegular.ttf") format("truetype"), url("../fonts/SFUITextRegular/SFUITextRegular.svg#SFUI Text") format("svg"); }
+
+@font-face {
+  font-family: "SFUI Text";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/SFUITextLight/SFUITextLight.eot");
+  src: url("../fonts/SFUITextLight/SFUITextLight.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUITextLight/SFUITextLight.woff") format("woff"), url("../fonts/SFUITextLight/SFUITextLight.ttf") format("truetype"), url("../fonts/SFUITextLight/SFUITextLight.svg#SFUI Text") format("svg"); }
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/BebasNeueBold/BebasNeueBold.eot");
+  src: url("../fonts/BebasNeueBold/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBold/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeueBold/BebasNeueBold.ttf") format("truetype"), url("../fonts/BebasNeueBold/BebasNeueBold.svg#Bebas Neue") format("svg"); }
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/BebasNeueBook/BebasNeueBook.eot");
+  src: url("../fonts/BebasNeueBook/BebasNeueBook.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBook/BebasNeueBook.woff") format("woff"), url("../fonts/BebasNeueBook/BebasNeueBook.ttf") format("truetype"), url("../fonts/BebasNeueBook/BebasNeueBook.svg#Bebas Neue") format("svg"); }
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot");
+  src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueRegular/BebasNeueRegular.woff") format("woff"), url("../fonts/BebasNeueRegular/BebasNeueRegular.ttf") format("truetype"), url("../fonts/BebasNeueRegular/BebasNeueRegular.svg#Bebas Neue") format("svg"); }
+
+@font-face {
+  font-family: "Galaxie Polaris";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/GalaxiePolaris-Bold/GalaxiePolaris-Bold.eot");
+  src: url("../fonts/GalaxiePolaris-Bold/GalaxiePolaris-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GalaxiePolaris-Bold/GalaxiePolaris-Bold.woff") format("woff"), url("../fonts/GalaxiePolaris-Bold/GalaxiePolaris-Bold.ttf") format("truetype"), url("../fonts/GalaxiePolaris-Bold/GalaxiePolaris-Bold.svg#Galaxie Polaris") format("svg"); }
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  min-width: 340px;
+  color: #333333;
+  position: relative;
+  background-color: #ffffff; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+.hidden {
+  display: none; }
+
+.wrapper {
+  margin: 0 auto; }
+
+a {
+  text-decoration: none; }
+
+#mute {
+  display: none;
+  width: 150px;
+  height: 40px;
+  background: url(../img/mute.png) 50% no-repeat;
+  cursor: pointer;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+form input.error {
+  box-shadow: inset 0px 0px 20px 1px rgba(255, 0, 0, 0.3);
+  border: 2px solid red !important; }
+
+form input.not_error {
+  box-shadow: inset 0px 0px 20px 1px rgba(100, 255, 100, 0.3);
+  border: 2px solid #99FF99 !important; }
+
+video.video {
+  min-height: 760px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  background: #e5e4e8;
+  z-index: 0; }
+
+canvas.canvas {
+  min-height: 720px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  /* background: #000; */
+  z-index: -1; }
+
+.preloaderGM {
+  z-index: 999999999;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 45vh;
+  background: #fff;
+  opacity: 1;
+  animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -o-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -moz-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -ms-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -webkit-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards; }
+
+.preloaderGM .pre_circles {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto; }
+
+.preloaderGM .pre_circles .pre_circle1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #232323;
+  will-change: contents;
+  animation: circle_grow 1s 1s linear infinite;
+  -o-animation: circle_grow 1s 1s linear infinite;
+  -webkit-animation: circle_grow 1s 1s linear infinite;
+  -moz-animation: circle_grow 1s 1s linear infinite;
+  -ms-animation: circle_grow 1s 1s linear infinite;
+  opacity: 0; }
+
+.preloaderGM .pre_circles .pre_circle2 {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50px;
+  border: 2px solid #232323;
+  will-change: contents;
+  animation: circle_grow 1s 2s linear infinite;
+  -o-animation: circle_grow 1s 2s linear infinite;
+  -moz-animation: circle_grow 1s 2s linear infinite;
+  -ms-animation: circle_grow 1s 2s linear infinite;
+  -webkit-animation: circle_grow 1s 2s linear infinite;
+  opacity: 0; }
+
+@keyframes decrease {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
+
+@keyframes circle_grow {
+  0% {
+    width: 0;
+    height: 0;
+    margin-left: 25px;
+    margin-top: 25px;
+    opacity: 1; }
+  100% {
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
+    opacity: 0; } }
+
+@keyframes preloader_hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes loader_vis {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.modal-overlay {
+  display: none;
+  padding-top: 1px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+  overflow: auto; }
+  .modal-overlay .modal-content {
+    margin: 10vh auto;
+    width: 60vw;
+    padding: 30px;
+    background: #fff;
+    margin-bottom: 0px;
+    border-radius: 4px;
+    height: 70vh; }
+  .modal-overlay .close-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    right: 40px;
+    padding: 0px 14px;
+    padding-top: 4px;
+    cursor: pointer;
+    transition: 0.2s linear; }
+    .modal-overlay .close-button .one {
+      height: 50px;
+      width: 2px;
+      background-color: #fff;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transition: 0.2s linear; }
+    .modal-overlay .close-button .two {
+      margin-top: -50px;
+      height: 50px;
+      width: 2px;
+      background-color: #fff;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transition: 0.2s linear; }
+    .modal-overlay .close-button:hover .one {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transition: 0.2s linear;
+      background-color: #000; }
+    .modal-overlay .close-button:hover .two {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transition: 0.2s linear;
+      background-color: #000; }
+
+#modal-video .modal-content {
+  height: auto;
+  width: 100%; }
+
+#modal-video .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  #modal-video .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*Параметры контейнера */
+.countdownHolder {
+  width: 350px;
+  margin: 0;
+  margin-left: -25px;
+  font: 30px/1.5 Roboto, sans-serif;
+  text-align: center;
+  letter-spacing: -3px;
+  /*Параметры цифр */
+  /*Параметры подложки для секций */
+  /*Параметры секций разделения (:)*/
+  /*Параметры вспомогательного текста (дни, часы, минуты, секунды)*/ }
+  .countdownHolder .position {
+    display: inline-block;
+    height: 1.8em;
+    overflow: hidden;
+    position: relative;
+    width: 0.55em; }
+  .countdownHolder .digit {
+    position: absolute;
+    display: block;
+    width: 0.5em;
+    border-radius: 0.2em;
+    text-align: center;
+    color: #000;
+    letter-spacing: -1px; }
+    .countdownHolder .digit.static {
+      margin-top: 18px; }
+  .countdownHolder .countDays,
+  .countdownHolder .countHours,
+  .countdownHolder .countMinutes,
+  .countdownHolder .countSeconds {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px; }
+  .countdownHolder .countDiv {
+    display: none;
+    width: 16px;
+    height: 1.6em;
+    position: relative; }
+    .countdownHolder .countDiv:before, .countdownHolder .countDiv:after {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: #444;
+      border-radius: 50%;
+      left: 50%;
+      margin-left: -3px;
+      top: 0.5em;
+      box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.5);
+      content: ''; }
+    .countdownHolder .countDiv:after {
+      top: 0.9em; }
+  .countdownHolder .textdigit {
+    font-size: 15px;
+    font-family: Roboto;
+    letter-spacing: 0px; }
+
+.subm {
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s linear; }
+  .subm:hover, .subm:focus {
+    -ms-transform: scale(1.02);
+    transform: scale(1.02); }
+
+.callback-btn {
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #bd2626;
+  width: 160px;
+  line-height: 45px;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  text-align: center;
+  color: #2d2c2c;
+  font-family: "Bebas Neue";
+  font-size: 17px;
+  font-weight: 700;
+  cursor:pointer;
+  letter-spacing: 0.68px; }
+  .callback-btn:hover {
+    color: #fff;
+    background-color: #bd2626; }
+
+.btn {
+  box-shadow: 0 7px 24px rgba(247, 77, 77, 0.43);
+  border-radius: 36px;
+  background-color: #e25050;
+  min-width: 188px;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 74px;
+  color: #ffffff;
+  font-family: "SFUI Text";
+  font-size: 17px;
+  font-weight: 400; }
+  .btn b {
+    font-weight: 800; }
+
+.package-btn {
+  padding: 0;
+  width: 183px;
+  line-height: 62px; }
+
+.header {
+  min-height: 760px;
+  padding-top: 23px;
+  background: #c9d0d2 url(../img/header-bg.jpg) 50% 0 no-repeat;
+  position: relative;
+  overflow: hidden; }
+  .header .container {
+    z-index: 2; }
+  .header .potok {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 9px; }
+    .header .potok span {
+      display: inline-block;
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: url(../img/lists.svg) 50% 0 no-repeat; }
+  .header .phones {
+    text-align: right; }
+    .header .phones .phone {
+      color: #2d2c2c;
+      font-family: "Bebas Neue";
+      font-size: 29px;
+      font-weight: 400;
+      line-height: 49px;
+      display: inline-block; }
+      .header .phones .phone span {
+        margin-left: 14px;
+        color: #2d2c2c;
+        font-family: "SFUI Text";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 15px;
+        display: block; }
+    .header .phones .phone1 {
+      margin-right: 50px;
+      padding-left: 27px;
+      background: url(../img/phone-icon.png) 0 50% no-repeat; }
+  .header .topline {
+    margin-bottom: 66px;
+    position: relative; }
+  .header .title {
+    color: #1c1b1b;
+    font-family: "Bebas Neue";
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 80px;
+    text-transform: uppercase;
+    vertical-align: top;
+    margin-bottom: 20px; }
+    .header .title span {
+      display: inline-block;
+      color: #ffffff;
+      font-family: "Bebas Neue";
+      font-size: 47px;
+      font-weight: 500;
+      line-height: 74px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      background-color: #e25050;
+      text-align: center;
+      padding-left: 17px;
+      padding-right: 17px;
+      -ms-transform: translateY(-20px);
+      transform: translateY(-20px); }
+  .header .undertitle {
+    color: #1c1b1b;
+    font-family: "Bebas Neue";
+    font-size: 35px;
+    margin-top: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  .header .desc {
+    color: #070707;
+    font-family: "SFUI Text";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    max-width: 570px;
+    margin-bottom: 50px; }
+  .header .date {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 23px; }
+    .header .date span {
+      color: #e25050; }
+  .header .info {
+    opacity: 0.54;
+    color: #070707;
+    font-family: "SFUI Text";
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    max-width: 140px;
+    display: inline-block;
+    vertical-align: top;
+    -ms-transform: translateY(5px);
+    transform: translateY(5px); }
+  .header .date-block {
+    margin-bottom: 20px; }
+  .header .info-block {
+    margin-top: 55px;
+    border-top: 1px #d4d3d7 solid;
+    max-width: 565px;
+    padding-top: 30px; }
+    .header .info-block .text {
+      display: inline-block;
+      vertical-align: top;
+      opacity: 0.92;
+      color: #2d2c2c;
+      font-family: "SFUI Text";
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      max-width: 255px;
+      position: relative; }
+      .header .info-block .text span {
+        position: absolute;
+        top: 0;
+        right: calc(100% + 5px); }
+  .header .play-icon {
+    display: block;
+    width: 159px;
+    height: 159px;
+    background: url(../img/play-icon2.svg) 50% no-repeat;
+    background-size: 159px 159px;
+    border-radius: 50%; }
+  .header #playMobileVideo {
+    display: none; }
+
+#mute {
+  display: none;
+  width: 150px;
+  height: 40px;
+  background: url(../img/mute.png) 50% no-repeat;
+  cursor: pointer;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: -50px; }
+
+#mute.muted {
+  background: url(../img/unmute.png) 50% no-repeat; }
+
+form.standart-form {
+  max-width: 400px;
+  text-align: center;
+  position: relative; }
+  form.standart-form .part {
+    margin: 0 auto;
+    display: inline-block;
+    min-width: 300px; }
+  form.standart-form .label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px; }
+  form.standart-form input.name,
+  form.standart-form input.email,
+  form.standart-form input.phone {
+    width: 300px;
+    max-width: 300px;
+    height: 45px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+    margin-bottom: 15px;
+    display: block; }
+  form.standart-form:before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.7) url(../img/loading.svg) 50% no-repeat;
+    z-index: 10; }
+  form.standart-form.loading:before {
+    display: block; }
+
+.sec1 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background-color: #f0f0f2; }
+  .sec1 .sec-title {
+    max-width: 3900px;
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 77px;
+    margin-bottom: 50px; }
+    .sec1 .sec-title span {
+      display: block;
+      font-size: 42px;
+      font-weight: 500; }
+  .sec1 .video {
+    height: 401px;
+    background: url(../img/videobg.jpg) 50% no-repeat;
+    background-size: cover;
+    text-align: center; }
+    .sec1 .video .play-icon {
+      display: inline-block;
+      color: #ffffff;
+      font-family: "SFUI Text";
+      font-size: 20px;
+      line-height: 116px;
+      padding-left: 140px;
+      font-weight: 700;
+      background: url(../img/play-icon.svg) 0 50% no-repeat; }
+  .sec1 .text-block {
+    text-align: center;
+    margin-top: 75px; }
+    .sec1 .text-block .text {
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      position: relative;
+      text-align: left; }
+      .sec1 .text-block .text:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 40px;
+        top: -125px;
+        width: 1px;
+        height: 100px;
+        background-color: #e3b4b5; }
+
+.sec2 {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  position: relative;
+  box-shadow: 0 7px 49px rgba(134, 134, 134, 0.2);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0; }
+  .sec2:before {
+    content: '';
+    display: block;
+    width: 2000px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: calc(50% + 210px);
+    background-color: #f3f3f3;
+    border-right: 1px solid #e0e0e0; }
+  .sec2 .block-title {
+    max-width: 340px;
+    color: #e25050;
+    font-family: "Bebas Neue";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 180px; }
+    .sec2 .block-title b {
+      color: #252525; }
+  .sec2 .line {
+    width: 190px;
+    height: 1px;
+    background-color: #000;
+    margin-bottom: 20px; }
+  .sec2 .text {
+    color: #1c1c1c;
+    font-family: "SFUI Text";
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px; }
+	.sec2 .textt {
+    max-width: 340px;
+    color: #e25050;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 180px; }
+  .sec2 .summ {
+    color: #cb4a49;
+    font-family: "SFUI Text";
+    font-size: 30px;
+    font-weight: 500; }
+  .sec2 .zp {
+    display: none; }
+    .sec2 .zp.active {
+      display: block; }
+  .sec2 .btn {
+    margin-top: 30px; }
+  .sec2 .text2 {
+    color: #070707;
+    font-family: "SFUI Text";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 25px; }
+  .sec2 .tabs-menu ul {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #cecece;
+    border-radius: 3px; }
+    .sec2 .tabs-menu ul .tab-title {
+      color: #0d0d0d;
+      font-family: "SFUI Text";
+      font-size: 15px;
+      line-height: 48px;
+      font-weight: 400;
+      display: inline-block;
+      vertical-align: top;
+      background-color: #ffffff;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-right: 1px solid #cecece;
+      cursor: pointer; }
+      .sec2 .tabs-menu ul .tab-title.active {
+        background-color: #e8e8e8; }
+      .sec2 .tabs-menu ul .tab-title:last-child {
+        border: none; }
+  .sec2 .tabs-content .tab {
+    display: none;
+    margin-top: 50px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain; }
+    .sec2 .tabs-content .tab.active {
+      display: block; }
+  .sec2 .tabs-content .tab1 {
+    background-image: url(../img/tab1.png); }
+  .sec2 .tabs-content .tab2 {
+    background-image: url(../img/tab2.png); }
+  .sec2 .tabs-content .tab3 {
+    background-image: url(../img/tab3.png); }
+
+.sec3 {
+  background-image: linear-gradient(to bottom, #cd4a49 0%, #ffffff 52%, #ffffff 100%);
+  padding-top: 145px;
+  padding-bottom: 0px; }
+  .sec3 .sec-title {
+    font-family: "Bebas Neue";
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 64px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 232px; }
+    .sec3 .sec-title span {
+      display: block;
+      color: #ffffff; }
+  .sec3 ul {
+    background: url(../img/mountain.png) 50% 100% no-repeat;
+    height: 1000px;
+    position: relative; }
+    .sec3 ul .item {
+      color: #2d2c2c;
+      font-family: "SFUI Text";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      max-width: 300px;
+      position: absolute; }
+      .sec3 ul .item:before {
+        content: attr(data-number);
+        display: block;
+        color: #cf5251;
+        font-family: "Bebas Neue";
+        font-size: 137px;
+        font-weight: 400;
+        line-height: 77px;
+        margin-bottom: 20px; }
+    .sec3 ul .item1 {
+      right: 0;
+      bottom: 187px;
+      max-width: 200px; }
+    .sec3 ul .item2 {
+      left: 0;
+      bottom: 208px;
+      max-width: 260px; }
+    .sec3 ul .item3 {
+      left: 110px;
+      bottom: 485px;
+      max-width: 285px; }
+    .sec3 ul .item4 {
+      right: 0;
+      bottom: 561px;
+      max-width: 300px; }
+    .sec3 ul .item5 {
+      left: 210px;
+      bottom: 741px;
+      max-width: 310px; }
+    .sec3 ul .item6 {
+      left: 738px;
+      bottom: 855px;
+      max-width: 260px; }
+
+.sec4 {
+  box-shadow: 0 7px 49px rgba(134, 134, 134, 0.2);
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 145px;
+  padding-bottom: 145px; }
+  .sec4:before {
+    content: '';
+    display: block;
+    width: 2000px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: calc(50% + 300px);
+    background-color: #2b2b2b;
+    border-right: 1px solid #e0e0e0; }
+  .sec4 .program-title {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 40px;
+    max-width: 160px;
+    margin-bottom: 70px; }
+  .sec4 .program-navigation ul .tab-link {
+    color: #595959;
+    font-family: "SFUI Text";
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 18px;
+    text-align: center;
+    width: 110px;
+    line-height: 40px;
+    margin-bottom: 1px;
+    margin-left: -22px;
+    transition: all 0.2s linear; }
+    .sec4 .program-navigation ul .tab-link.active, .sec4 .program-navigation ul .tab-link:hover {
+      background-color: #e25050;
+      color: #fff; }
+  .sec4 .program-navigation ul .ekvator,
+  .sec4 .program-navigation ul .defence {
+    font-family: "SFUI Text";
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.66;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative; }
+    .sec4 .program-navigation ul .ekvator:before,
+    .sec4 .program-navigation ul .defence:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -35px;
+      top: 5px;
+      width: 25px;
+      height: 25px;
+      background-position: 50%;
+      background-repeat: no-repeat; }
+  .sec4 .program-navigation ul .ekvator:before {
+    background-image: url(../img/ekvator-icon.png); }
+  .sec4 .program-navigation ul .defence:before {
+    background-image: url(../img/defence-icon.png); }
+  .sec4 .module {
+    display: none; }
+    .sec4 .module.active {
+      display: block; }
+    .sec4 .module .module-number {
+      opacity: 0.98;
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 31px;
+      font-weight: 700;
+      letter-spacing: 0.62px;
+      
+      vertical-align: top;
+      position: relative;
+      margin-right: 150px;
+      }
+      .sec4 .module .module-number:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 88px;
+        height: 88px;
+        right: -125px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #fff;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover; }
+    .sec4 .module .module-title {
+      display: inline-block;
+      vertical-align: top;
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 31px;
+      font-weight: 300;
+      max-width: 470px;
+ margin-bottom: 74px;	  }
+    .sec4 .module ul {
+      list-style-type: disc;
+      max-width: 325px;
+      display: inline-block;
+      vertical-align: top; }
+      .sec4 .module ul li {
+        color: #000000;
+        font-family: "SFUI Text";
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 300; }
+    .sec4 .module .speaker-name {
+      font-size: 19px;
+      line-height: 21px;
+      font-weight: 700;
+      -ms-transform: translateY(-50px);
+      transform: translateY(-50px); }
+    .sec4 .module .speaker-prof {
+      -ms-transform: translateY(-50px);
+      transform: translateY(-50px); }
+  .sec4 .bottom-block {
+    text-align: center;
+    border-top: 1px #e6e6e6 solid;
+    padding-top: 75px;
+    margin-top: 70px; }
+    .sec4 .bottom-block .bottom-text {
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 32px;
+      margin-bottom: 20px; }
+      .sec4 .bottom-block .bottom-text b {
+        font-weight: 700; }
+    .sec4 .bottom-block ul {
+      text-align: left;
+      max-width: 100%;
+      margin-bottom: 50px; }
+  .sec4 .btn {
+    margin: 0 auto;
+    display: block;
+    max-width: 417px; }
+  
+
+.sec5 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: #cd4a49 url(../img/sec5.jpg) 50% 0px no-repeat;
+  margin-top: 0px; }
+  .sec5 .sec-title {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 77px; }
+  .sec5 .item {
+    padding-left: 250px;
+    position: relative;
+    margin-bottom: 40px;
+    min-height: 217px; }
+    .sec5 .item:last-child {
+      margin-bottom: 0; }
+      .sec5 .item:last-child:after {
+        display: none; }
+    .sec5 .item .item-title {
+      color: #ffffff;
+      font-family: "SFUI Text";
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 15px; }
+    .sec5 .item .item-text {
+      color: #ffffff;
+      font-family: "SFUI Text";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px; }
+  .sec5 .it1 {
+    background: url(../img/sec5-it1.png) 0 0 no-repeat; }
+  .sec5 .it2 {
+    background: url(../img/sec5-it2.png) 0 0 no-repeat; }
+  .sec5 .it3 {
+    background: url(../img/sec5-it3.png) 0 0 no-repeat; }
+
+.sec-results {
+  background-color: #f0f0f2;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .sec-results .sec-title {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 95px; }
+  .sec-results .item {
+    padding-left: 320px;
+    margin-bottom: 150px; }
+    .sec-results .item .item-title {
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 31px;
+      font-weight: 700;
+      letter-spacing: 0.62px;
+      min-height: 86px;
+      margin-bottom: 20px; }
+    .sec-results .item .item-text {
+      color: #141414;
+      font-family: "SFUI Text";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px; }
+  .sec-results .it1 {
+    background: url(../img/res-it1.png) no-repeat -40px 0; }
+  .sec-results .it2 {
+    background: url(../img/res-it2.png) no-repeat 50px 0; }
+  .sec-results .it3 {
+    margin-bottom: 0;
+    background: url(../img/res-it3.png) no-repeat 0 0; }
+  .sec-results .it4 {
+    margin-bottom: 0;
+    background: url(../img/res-it4.png) no-repeat 0 0; }
+  .sec-results .btn {
+    margin: 0 auto;
+    display: block;
+    max-width: 360px;
+    margin-top: 110px; }
+
+.sec6 {
+  padding-top: 145px;
+  padding-bottom: 75px;
+  background-color: #cd4a49; }
+  .sec6 .sec-title {
+    margin-top: 179px;
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 42px;
+    font-weight: 500; }
+    .sec6 .sec-title b {
+      display: block;
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 77px; }
+  .sec6 .slider .slick-prev,
+  .sec6 .slider .slick-next {
+    top: auto;
+    bottom: 90px;
+    z-index: 10; }
+  .sec6 .slider .slick-prev {
+    left: -420px; }
+  .sec6 .slider .slick-next {
+    right: auto;
+    left: -320px; }
+  .sec6 .slider .slick-dots {
+    bottom: -60px; }
+    .sec6 .slider .slick-dots:before {
+      content: 'из 4';
+      display: block;
+      color: #ffffff;
+      font-family: "Bebas Neue";
+      font-size: 23px;
+      font-weight: 700;
+      bottom: 150px;
+      position: absolute;
+      left: -375px; }
+    .sec6 .slider .slick-dots li {
+      display: none; }
+    .sec6 .slider .slick-dots li.slick-active {
+      display: inline-block;
+      text-align: center; }
+      .sec6 .slider .slick-dots li.slick-active button {
+        color: #ffffff;
+        font-family: "Bebas Neue";
+        font-size: 23px;
+        font-weight: 700;
+        left: -755px;
+        bottom: 152px;
+        position: absolute; }
+        .sec6 .slider .slick-dots li.slick-active button:before {
+          display: none; }
+  .sec6 .slider-wrap {
+    background-color: #ffffff;
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-bottom: 60px; }
+    .sec6 .slider-wrap .slider-title {
+      box-shadow: -12px 12px 20px 1px rgba(38, 38, 38, 0.06);
+      background-color: #ededed;
+      display: inline-block;
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 50px;
+      padding: 0 20px;
+      margin-bottom: 45px;
+      margin-left: 30px; }
+  .sec6 .slide {
+    background-color: #fff;
+    min-height: 500px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  .sec6 .slide1 {
+    background-image: url(../img/slide1.jpg); }
+  .sec6 .slide2 {
+    background-image: url(../img/slide2.jpg);
+    background-size: 100%; }
+  .sec6 .slide3 {
+    background-image: url(../img/slide3.jpg); }
+  .sec6 .slide4 {
+    background-image: url(../img/slide4.png); }
+
+.sec7 {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .sec7 .sec-title {
+    font-family: "Bebas Neue";
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 64px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 85px; }
+    .sec7 .sec-title span {
+      display: block;
+      color: #e25050; }
+  .sec7 .speakers .slick-prev,
+  .sec7 .speakers .slick-next {
+    top: auto;
+    bottom: -66px;
+    z-index: 10; }
+    .sec7 .speakers .slick-prev:before,
+    .sec7 .speakers .slick-next:before {
+      color: #000; }
+  .sec7 .speakers .slick-prev {
+    left: 520px; }
+  .sec7 .speakers .slick-next {
+    right: 480px; }
+  .sec7 .speakers .slick-dots {
+    bottom: -60px; }
+    .sec7 .speakers .slick-dots:before {
+      content: 'из 9';
+      display: block;
+      color: #000;
+      font-family: "Bebas Neue";
+      font-size: 23px;
+      font-weight: 700;
+      bottom: -3px;
+      position: absolute;
+      left: 51%; }
+    .sec7 .speakers .slick-dots li {
+      display: none; }
+    .sec7 .speakers .slick-dots li.slick-active {
+      display: inline-block;
+      text-align: center; }
+      .sec7 .speakers .slick-dots li.slick-active button {
+        color: #000;
+        font-family: "Bebas Neue";
+        font-size: 23px;
+        font-weight: 700; }
+        .sec7 .speakers .slick-dots li.slick-active button:before {
+          display: none; }
+  .sec7 .speaker {
+    width: 100%;
+    max-width: 325px;
+    position: relative;
+    margin: 0 45px; }
+    .sec7 .speaker .speaker-info-wrap {
+      background-color: #cfcfcf;
+      box-shadow: 0 7px 24px rgba(97, 97, 97, 0.29);
+      height: 340px;
+      margin-bottom: 30px; }
+      .sec7 .speaker .speaker-info-wrap .speaker-photo {
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        height: 100%;
+        width: 325px; }
+      .sec7 .speaker .speaker-info-wrap .speaker-prof {
+        background-color: #ffffff;
+        position: absolute;
+        height: auto;
+        width: 325px;
+        bottom: 94px;
+        left: 0;
+        color: #e25050;
+        font-family: "SFUI Text";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+        overflow: hidden;
+        padding: 15px;
+        z-index: 2; }
+    .sec7 .speaker .speaker-name {
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 35px;
+      font-weight: 400;
+      margin-bottom: 15px; }
+    .sec7 .speaker .speaker-info {
+      position: absolute;
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      opacity: 0;
+      transition: .2s linear;
+      z-index: 1; }
+      .sec7 .speaker .speaker-info li {
+        font-family: "SFUI Text";
+        font-size: 13px;
+        line-height: 17px;
+        color: #fff;
+        list-style: disc;
+        margin-bottom: 7px; }
+      .sec7 .speaker .speaker-info:hover {
+        opacity: 1; }
+    .sec7 .speaker.speaker1 .speaker-photo {
+      background-image: url(../img/speakers/oles.png); }
+    .sec7 .speaker.speaker2 .speaker-photo {
+      background-image: url(../img/speakers/stepaniyk.jpg); }
+    .sec7 .speaker.speaker3 .speaker-photo {
+      background-image: url(../img/speakers/scherbakov.jpg); }
+    .sec7 .speaker.speaker4 .speaker-photo {
+      background-image: url(../img/speakers/zybatyk.jpg); }
+    .sec7 .speaker.speaker5 .speaker-photo {
+      background-image: url(../img/speakers/gydkov.jpg); }
+    .sec7 .speaker.speaker6 .speaker-photo {
+      background-image: url(../img/speakers/movchan.jpg); }
+    .sec7 .speaker.speaker7 .speaker-photo {
+      background-image: url(../img/speakers/elena.jpg); }
+    .sec7 .speaker.speaker8 .speaker-photo {
+      background-image: url(../img/speakers/scherbina.jpg); }
+    .sec7 .speaker.speaker9 .speaker-photo {
+      background-image: url(../img/speakers/rii.jpg); }
+  .sec7 .speaker3 .speaker-info-wrap .speaker-prof,
+  .sec7 .speaker4 .speaker-info-wrap .speaker-prof,
+  .sec7 .speaker5 .speaker-info-wrap .speaker-prof {
+    font-size: 13px; }
+
+.sec8 {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  box-shadow: 0 7px 49px rgba(134, 134, 134, 0.2);
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff; }
+  .sec8 .packages-mobile {
+    display: none; }
+  .sec8 .block-title {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 40px;
+    max-width: 330px; }
+    .sec8 .block-title span {
+      color: #e25050; }
+  .sec8 .package-type {
+    height: 90px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    margin-bottom: 40px; }
+    .sec8 .package-type.online {
+      background-image: url(../img/online.png); }
+    .sec8 .package-type.offline {
+      background-image: url(../img/offline.png); }
+  .sec8 .table-title {
+    margin-bottom: 40px; }
+  .sec8 .packages-info li,
+  .sec8 .additional li {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 77px; }
+    .sec8 .packages-info li:nth-child(odd),
+    .sec8 .additional li:nth-child(odd) {
+      background-color: rgba(199, 199, 199, 0.15); }
+    .sec8 .packages-info li p,
+    .sec8 .additional li p {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 17px;
+      font-weight: 400; }
+  .sec8 .package-name {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center; }
+    .sec8 .package-name.red {
+      color: #f6473b; }
+  .sec8 .package-info li {
+    min-height: 77px;
+    background-repeat: no-repeat;
+    background-position: 50%; }
+    .sec8 .package-info li:nth-child(odd) {
+      background-color: rgba(199, 199, 199, 0.15); }
+    .sec8 .package-info li.check {
+      background-image: url(../img/check.svg); }
+    .sec8 .package-info li.check.additional {
+      background-image: url(../img/check-red.svg); }
+  .sec8 .additional li span {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 19px;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #e25050;
+    line-height: 27px;
+    padding-left: 7px;
+    padding-right: 7px; }
+  .sec8 .package-price-block {
+    margin-top: 70px;
+    text-align: center;
+    padding-bottom: 100px; }
+    .sec8 .package-price-block .oldprice {
+      color: #f15555;
+      font-family: "Bebas Neue";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 40px;
+       }
+    .sec8 .package-price-block .price-now-text {
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 23px; }
+    .sec8 .package-price-block .price-usd {
+      color: #f15555;
+      font-family: "Bebas Neue";
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 40px;
+      margin-bottom: 10px; }
+    .sec8 .package-price-block .price {
+      display: inline-block;
+      max-width: 120px;
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 25px; }
+    .sec8 .package-price-block .btn {
+      margin-bottom: 20px; }
+    .sec8 .package-price-block .places-left {
+      color: #8c8c8c;
+      font-family: "Bebas Neue";
+      font-size: 19px;
+      font-weight: 700; }
+      .sec8 .package-price-block .places-left span {
+        line-height: 20px;
+        width: 25px;
+        height: 15px;
+        display: inline-block;
+        background: url(../img/places-icon.svg) 50% 50% no-repeat; }
+  .sec8 .tc1 {
+    background-color: #f9f9f9; }
+  .sec8 .tc2 {
+    background-color: #f2f2f2; }
+  .sec8 .tc3 {
+    background-color: #ebebeb; }
+
+.sec9 {
+  background: url(../img/sec1.jpg) 50% no-repeat;
+  background-size: cover;
+  padding-top: 110px;
+  padding-bottom: 110px; }
+  .sec9 .sec-title {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 85px; }
+  .sec9 .videreviews-slider .slick-prev,
+  .sec9 .videreviews-slider .slick-next {
+    top: auto;
+    bottom: -66px;
+    z-index: 10; }
+  .sec9 .videreviews-slider .slick-prev {
+    left: 520px; }
+  .sec9 .videreviews-slider .slick-next {
+    right: 480px; }
+  .sec9 .videreviews-slider .slick-dots {
+    bottom: -60px; }
+    .sec9 .videreviews-slider .slick-dots:before {
+      content: 'из 7';
+      display: block;
+      color: #ffffff;
+      font-family: "Bebas Neue";
+      font-size: 23px;
+      font-weight: 700;
+      bottom: -3px;
+      position: absolute;
+      left: 51%; }
+    .sec9 .videreviews-slider .slick-dots li {
+      display: none; }
+    .sec9 .videreviews-slider .slick-dots li.slick-active {
+      display: inline-block;
+      text-align: center; }
+      .sec9 .videreviews-slider .slick-dots li.slick-active button {
+        color: #ffffff;
+        font-family: "Bebas Neue";
+        font-size: 23px;
+        font-weight: 700; }
+        .sec9 .videreviews-slider .slick-dots li.slick-active button:before {
+          display: none; }
+  .sec9 .videoreview .video {
+    height: 233px;
+    background: url(../img/videreviewbg.jpg) 50% no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 34px;
+    text-align: center; }
+    .sec9 .videoreview .video .play-icon {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background: url(../img/play-icon2.svg) 50% no-repeat;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      margin-left: -45px;
+      margin-top: -45px; }
+  .sec9 .videoreview .author-name {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 31px;
+    font-weight: 400;
+    text-align: center; }
+  .sec9 .videoreview .author-info {
+    color: #ffffff;
+    font-family: "SFUI Text";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center; }
+  .sec9 .vr0 .video {
+    background-image: url(../img/vr0.jpg); }
+  .sec9 .vr1 .video {
+    background-image: url(../img/vr1.jpg); }
+  .sec9 .vr2 .video {
+    background-image: url(../img/vr2.jpg); }
+  .sec9 .vr3 .video {
+    background-image: url(../img/vr3.jpg); }
+  .sec9 .vr4 .video {
+    background-image: url(../img/vr4.jpg); }
+  .sec9 .vr5 .video {
+    background-image: url(../img/vr5.jpg); }
+  .sec9 .vr6 .video {
+    background-image: url(../img/vr6.jpg); }
+
+.sec10 {
+  padding-top: 90px;
+  padding-bottom: 80px; }
+  .sec10 .sec-title {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 58px; }
+  .sec10 .question-block {
+    padding-left: 54px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-right: 100px;
+    border-top: 1px solid #e5e5e5;
+    position: relative; }
+    .sec10 .question-block.active {
+      box-shadow: -11px 13px 36px 2px rgba(38, 38, 38, 0.11);
+      border: 1px solid #df5352;
+      background-color: #ffffff;
+      border: 1px solid #f1b0af; }
+      .sec10 .question-block.active .icon {
+        background: url(../img/close-icon.png) 50% no-repeat; }
+      .sec10 .question-block.active:before {
+        content: '?';
+        color: #ca4948;
+        font-family: "Bebas Neue";
+        font-size: 68px;
+        font-weight: 400;
+        line-height: 64px;
+        display: block;
+        position: absolute;
+        left: 54px;
+        top: 0;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+    .sec10 .question-block .icon {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: url(../img/open-icon.png) 50% no-repeat;
+      top: 30px;
+      right: 30px;
+      cursor: pointer; }
+    .sec10 .question-block .question {
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26px; }
+    .sec10 .question-block .answer {
+      display: none;
+      color: #000000;
+      font-family: "SFUI Text";
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-top: 20px; }
+  .sec10 .btn-wrap {
+    margin-top: 70px;
+    text-align: center; }
+
+.sec-last {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background-color: #f6f6f8; }
+  .sec-last .sec-title {
+    color: #000000;
+    font-family: "Bebas Neue";
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 80px; }
+  .sec-last .item-title {
+    font-family: "Bebas Neue";
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 31px;
+    color: #000000;
+    letter-spacing: 0.62px;
+    margin-bottom: 30px;
+    min-height: 62px; }
+    .sec-last .item-title span {
+      color: #e25050; }
+  .sec-last .item-text {
+    color: #2c2c2c;
+    font-family: "SFUI Text";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; }
+  .sec-last .btn {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: block;
+    width: 370px;
+    padding: 0; }
+  .sec-last .item {
+    padding-top: 155px; }
+  .sec-last .it1 {
+    background: url(../img/seclast-it1.png) 0 0 no-repeat; }
+  .sec-last .it2 {
+    background: url(../img/seclast-it2.png) 0 0 no-repeat; }
+  .sec-last .it3 {
+    background: url(../img/seclast-it3.png) 0 0 no-repeat; }
+  .sec-last .it4 {
+    background: url(../img/seclast-it4.png) 0 0 no-repeat; }
+
+.footer1,
+.footer2,
+.footer3 {
+  vertical-align: top;
+  display: inline-block; }
+
+footer {
+  font-family: Roboto;
+  font-weight: 500;
+  vertical-align: top;
+  padding-bottom: 35px;
+  width: 100%;
+  min-height: 250px;
+  background-color: #2f2f2f;
+  text-align: center; }
+
+footer br.sm {
+  display: none; }
+
+footer br.xs {
+  display: none; }
+
+footer p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left; }
+
+footer .social {
+  margin-bottom: 30px;
+  text-align: center; }
+
+footer a {
+  padding: 0 10px;
+  padding-left: 0px;
+  color: #fff;
+  font-size: 13px;
+  transition: all 0.3s linear;
+  text-align: left; }
+
+footer a:hover {
+  text-decoration: none; }
+
+footer a.partners {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  color: #f45c33;
+  border: 1px solid #f45c33; }
+
+footer a.partners:hover {
+  color: #fff;
+  background-color: #f45c33; }
+
+footer .contacts {
+  margin-top: 0; }
+
+footer .copy {
+  color: #8d8d8d;
+  margin-top: 44px;
+  margin-bottom: 0; }
+
+footer .icon-soc {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  vertical-align: top;
+  margin: 0px 20px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  color: #2f2f2f;
+  padding: 0px; }
+  footer .icon-soc i {
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    margin: 0 auto; }
+
+footer a.icon-soc:hover {
+  opacity: 0.8; }
+
+footer .icon-fb {
+  margin-left: 0px; }
+
+footer .icon-yt {
+  margin-right: 0px; }
+
+footer .modal-btn {
+  padding-left: 20px;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 14px; }
+
+footer .modal-btn:before {
+  content: '\f00c';
+  font-family: FontAwesome;
+  margin-left: -10px;
+  margin-right: 10px;
+  color: #848484; }
+
+.footer2 {
+  padding-top: 60px;
+  margin-left: 30px; }
+
+.footer3 {
+  padding-top: 58px;
+  margin-left: 30px; }
+
+.footer3 p.text4 {
+  line-height: 25px;
+  text-align: right;
+  font-family: Roboto;
+  font-weight: 400; }
+
+.footer3 p.text4 span a {
+  font-size: 16px;
+  padding-right: 70px;
+  float: left;
+  font-family: Roboto;
+  font-weight: 700; }
+
+.footer-line {
+  display: inline-block;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 90%;
+  height: 1px;
+  background-color: #6c6c6c;
+  opacity: 0.3; }
+
+footer .bottom-text {
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  color: #8d8d8d; }
+
+footer a.mail {
+  background-color: #f8ff44;
+  color: #636475;
+  font-weight: 700; }
+
+@media only screen and (max-width: 1130px) {
+  footer .footer3 {
+    margin-left: 0px; } }
+
+@media only screen and (max-width: 720px) {
+  footer .copy {
+    margin: 24px auto;
+    display: block; }
+  .footer2 {
+    padding-top: 0px;
+    margin: 0 auto;
+    display: block; }
+  footer p {
+    color: #979898;
+    font-size: 13px;
+    text-align: center; }
+  footer a.icon-soc {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
+    margin: 0px 10px; }
+  .footer3 p.text4 span {
+    color: #636475;
+    font-size: 16px;
+    padding-right: 20px; }
+  .footer-inline {
+    padding-left: 50px;
+    padding-top: 20px; }
+  .footer3 {
+    padding-top: 38px;
+    margin-left: 0px; }
+  footer .bottom-text br {
+    display: none; } }
+.sec8 .timertext{
+  color: #f15555;
+    font-family: "Bebas Neue";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 10px;
+    margin-top: 65px;
+}
+.sec8 .packages-mobile .timertext{
+  text-align: center;
+}
+.sec8 .packages-mobile .countdownHolder{
+  margin: 0 auto;
+}
+@media(max-width:720px){
+  .countdownHolder .countDays, .countdownHolder .countHours, .countdownHolder .countMinutes, .countdownHolder .countSeconds{
+    padding: 10px;
+  }
+  .sec8 .packages-mobile .countdownHolder{
+    width: 300px;
+    margin-bottom: 50px;
+  }
+}
